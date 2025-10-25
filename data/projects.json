@@ -1,0 +1,32 @@
+[
+  {
+    "title": "Nhà Phố Anh Hưng – Đội Nhân – Hà Nội",
+    "slug": "nha-pho-anh-hung-doi-nhan-ha-noi",
+    "image": "/anh1.jpg"
+  },
+  {
+    "title": "Thi công trọn gói chị Lý – Hưng Yên",
+    "slug": "thi-cong-tron-goi-chi-ly-hung-yen",
+    "image": "/anh2.jpg"
+  },
+  {
+    "title": "Biệt thự Việt Dũng – Đông Thịnh – Sông Lô – Vĩnh Phúc",
+    "slug": "biet-thu-viet-dung-dong-thinh-song-lo-vinh-phuc",
+    "image": "/anh3.jpg"
+  },
+  {
+    "title": "Nhà anh Tuấn – Thái Bình",
+    "slug": "nha-anh-tuan-thai-binh",
+    "image": "/anh4.jpg"
+  },
+  {
+    "title": "Nhà anh Quân – Hà Nam",
+    "slug": "nha-anh-quan-ha-nam",
+    "image": "/anh5.jpg"
+  },
+  {
+    "title": "Biệt thự chị Mai – Nam Định",
+    "slug": "biet-thu-chi-mai-nam-dinh",
+    "image": "/anh1.jpg"
+  }
+]
