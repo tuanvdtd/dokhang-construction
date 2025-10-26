@@ -13,7 +13,7 @@ export default function ContactSection() {
 
     const form = e.currentTarget;
     const formData = {
-      name: form.name.value,
+      name: form.name.valueOf(),
       email: form.email.value,
       phone: form.phone.value,
       message: form.message.value,
