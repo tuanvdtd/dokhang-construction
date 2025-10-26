@@ -11,12 +11,12 @@ export default function ContactSection() {
     e.preventDefault();
     if (!captcha) return alert("Vui lòng xác minh Captcha!");
 
-    const form = e.currentTarget;
+    const form = new FormData(e.currentTarget);;
     const formData = {
-      name: form.name.valueOf(),
-      email: form.email.value,
-      phone: form.phone.value,
-      message: form.message.value,
+      name: form.get("name"),
+      email: form.get("email"),
+      phone: form.get("phone"),
+      message: form.get("message"),
       token: captcha,
     };
 
