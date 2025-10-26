@@ -38,7 +38,7 @@ export default function CompanyIntro() {
             alt="Vietnam Map"
             width={700}
             height={700}
-            className="w-full max-w-[500px] lg:max-w-[600px] object-contain"
+            className="w-full max-w-[400px] lg:max-w-[400px] object-contain"
           />
         </div>
       </div>
