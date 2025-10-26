@@ -30,8 +30,7 @@ export default function ContactSection() {
       const data = await res.json();
       if (data.success) {
         alert("Gửi thành công!");
-        form.reset();
-      } else {
+        e.currentTarget.reset();
         alert("Lỗi: " + (data.error || "Không gửi được email!"));
       }
     } catch (err) {
