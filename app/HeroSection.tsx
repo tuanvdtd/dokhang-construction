@@ -63,7 +63,7 @@ export function CarouselHero() {
   const isAnimatingRef = useRef<boolean>(false);
   const timerRef = useRef<NodeJS.Timeout | null>(null);
   const autoPlayTimerRef = useRef<NodeJS.Timeout | null>(null);
-  const AUTO_PLAY_INTERVAL = 5000;
+  const AUTO_PLAY_INTERVAL = 3000;
 
   const stopAutoPlay = useCallback(() => {
     if (autoPlayTimerRef.current) {
@@ -139,6 +139,13 @@ export function CarouselHero() {
   }, [currentSlide, startAutoPlay]);
 
   const visiblePositions = [-2, -1, 0, 1, 2];
+
+  useEffect(() => {
+  slideImages.forEach((src) => {
+    const img = new Image();
+    img.src = src;
+  });
+}, []);
 
   return (
     // <section className="text-[62.5%]">

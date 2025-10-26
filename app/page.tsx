@@ -2,12 +2,14 @@ import ConstructionGrid from "@/components/ConstructionGrid";
 import CarouselHero from "./HeroSection";
 import { Col, Row } from 'antd';
 import Image from "next/image";
+import CompanyIntro from "@/components/CompanyIntro";
 
 export default function App() {
 
   return (
     <>
     <CarouselHero />
+    <CompanyIntro />
     <ConstructionGrid />
     <div className="w-full bg-[#d3d3d3] text-center pb-10">
       <h1 className="text-3xl text-[#1e73be] hover:text-black font-bold  pt-8 uppercase inline-block :after:content-[''] after:block after:w-[50%] hover:after:w-full after:transition-all after:duration-300 after:h-0.5 after:bg-[#3498db] hover:after:bg-black after:mx-auto after:mt-4 ">

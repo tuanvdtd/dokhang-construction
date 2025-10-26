@@ -52,7 +52,7 @@ export default function Footer() {
               
               <span>Facebook</span>
             </Link>
-            <Link href="#" target="_blank" className="flex items-center gap-1 hover:text-orange-400 cursor-pointer">
+            <Link href="https://www.tiktok.com/@dokhangconstruction" target="_blank" className="flex items-center gap-1 hover:text-orange-400 cursor-pointer">
                <TikTokIcon size={18} color="#ff6600" />
               <span>TikTok</span>
             </Link>
@@ -67,7 +67,7 @@ export default function Footer() {
         <div>
           <h3 className="text-lg font-semibold mb-4">Office</h3>
           <p className="text-sm leading-relaxed text-gray-300">
-            <strong>Hanoi office:</strong> Hai Bà Trưng, Hà Nội
+            <strong>Hanoi office:</strong> Đ. Trần Khát Chân, Thanh Nhàn, Hai Bà Trưng, Hà Nội
           </p>
         </div>
 
@@ -115,3 +115,4 @@ export default function Footer() {
     </footer>
   );
 }
+//<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.5940692420645!2d105.85618007503096!3d21.00890298063544!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135abf79b855b2f%3A0x216bb58cfc7fed34!2zxJAuIFRy4bqnbiBLaMOhdCBDaMOibiwgSGFpIELDoCBUcsawbmcsIEjDoCBO4buZaSwgVmnhu4d0IE5hbQ!5e0!3m2!1svi!2s!4v1761404066735!5m2!1svi!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>

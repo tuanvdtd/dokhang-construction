@@ -14,16 +14,17 @@ import {
 function Header() {
   return (
     <div className='w-full h-18 bg-[#F8FAFC] flex items-center border-b border-[#E2E8F0] fixed top-0 z-50'>
-      <Link href="/" className="flex mx-3 md:basis-1/4 md:justify-center">
+      <Link href="/" className="flex mx-3 md:basis-1/6 md:justify-center">
         <Image src="/logo1.png" alt="logo" width={70} height={70} />
       </Link>
-      <nav className="basis-2/4 hidden justify-center space-x-8 text-xl font-bold md:flex">
+      <nav className="basis-4/6 hidden justify-center space-x-5 lg:space-x- text-xl font-bold md:flex whitespace-nowrap">
         <Link href="/" className="text-gray-700 hover:text-blue-600 transition relative after:content-[''] after:absolute after:left-1/2 after:bottom-0 after:h-[2.2px] after:w-0 after:bg-[#24507A] after:transition-all after:duration-300 hover:after:left-0 hover:after:w-full after:origin-center">Trang chủ</Link>
         <Link href="/gioi-thieu" className="text-gray-700 hover:text-blue-600 transition relative after:content-[''] after:absolute after:left-1/2 after:bottom-0 after:h-[2.2px] after:w-0 after:bg-[#24507A] after:transition-all after:duration-300 hover:after:left-0 hover:after:w-full after:origin-center">Giới thiệu</Link>
+         <Link href="/dich-vu" className="text-gray-700 hover:text-blue-600 transition relative after:content-[''] after:absolute after:left-1/2 after:bottom-0 after:h-[2.2px] after:w-0 after:bg-[#24507A] after:transition-all after:duration-300 hover:after:left-0 hover:after:w-full after:origin-center">Dự án</Link>
         <Link href="/dich-vu" className="text-gray-700 hover:text-blue-600 transition relative after:content-[''] after:absolute after:left-1/2 after:bottom-0 after:h-[2.2px] after:w-0 after:bg-[#24507A] after:transition-all after:duration-300 hover:after:left-0 hover:after:w-full after:origin-center">Dịch vụ</Link>
         <Link href="/lien-he" className="text-gray-700 hover:text-blue-600 transition relative after:content-[''] after:absolute after:left-1/2 after:bottom-0 after:h-[2.2px] after:w-0 after:bg-[#24507A] after:transition-all after:duration-300 hover:after:left-0 hover:after:w-full after:origin-center">Liên hệ</Link>
       </nav>
-      <div className="flex-1 flex justify-end items-center space-x-10 mx-3 md:basis-1/4 md:justify-center">
+      <div className="flex-1 flex justify-end items-center space-x-10 mx-3 md:basis-1/6 md:justify-center">
         {/* <button className="hidden md:block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition">Get Started</button> */}
         <a
           href="tel:0123456789"
