@@ -3,20 +3,28 @@
 import { useState } from "react";
 import Image from "next/image";
 import ReCAPTCHA from "react-google-recaptcha";
+import { toast } from 'sonner';
 
 export default function ContactSection() {
   const [captcha, setCaptcha] = useState<string | null>(null);
-
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    if (!captcha) return alert("Vui lòng xác minh Captcha!");
+    
+    const form = e.currentTarget; // ✅ tách riêng form
+    if (!captcha) {
+      toast.warning("Vui lòng xác minh Captcha!");
+      return;
+    }
 
-    const form = new FormData(e.currentTarget);;
-    const formData = {
-      name: form.get("name"),
-      email: form.get("email"),
-      phone: form.get("phone"),
-      message: form.get("message"),
+    setIsSubmitting(true); 
+
+    const formData = new FormData(form);
+    const data = {
+      name: formData.get("name"),
+      email: formData.get("email"),
+      phone: formData.get("phone"),
+      message: formData.get("message"),
       token: captcha,
     };
 
@@ -24,18 +32,24 @@ export default function ContactSection() {
       const res = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
+        body: JSON.stringify(data),
       });
 
-      const data = await res.json();
-      if (data.success) {
-        alert("Gửi thành công!");
-        e.currentTarget.reset();
-        alert("Lỗi: " + (data.error || "Không gửi được email!"));
+      const result = await res.json();
+      if (result.success) {
+        toast.success("Gửi liên hệ thành công!");
+        setCaptcha(null);
+        form.reset(); // Reset form sau khi gửi thành công
+        return;
+      } else {
+        toast.error("Lỗi: " + (result.error || "Không gửi được email!"));
+        return;
       }
     } catch (err) {
       console.error(err);
-      alert("Lỗi hệ thống!");
+      toast.error("Lỗi hệ thống!");
+    } finally {
+      setIsSubmitting(false); // Kết thúc gửi
     }
   };
 
@@ -113,9 +127,10 @@ export default function ContactSection() {
 
           <button
             type="submit"
-            className="mt-4 bg-orange-600 hover:bg-orange-700 text-white font-semibold py-3 rounded-full transition"
+            disabled={isSubmitting}
+            className="mt-4 bg-orange-600 hover:bg-orange-700 text-white font-semibold py-3 rounded-full transition cursor-pointer disabled:bg-gray-400 disabled:cursor-not-allowed"
           >
-            GỬI ĐI
+           {isSubmitting ? "ĐANG GỬI..." : "GỬI LIÊN HỆ"}
           </button>
         </form>
       </div>

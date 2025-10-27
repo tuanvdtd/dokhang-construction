@@ -17,7 +17,7 @@ function Header() {
       <Link href="/" className="flex mx-3 md:basis-1/6 md:justify-center">
         <Image src="/logo1.png" alt="logo" width={70} height={70} />
       </Link>
-      <nav className="basis-4/6 hidden justify-center space-x-5 lg:space-x- text-xl font-bold md:flex whitespace-nowrap">
+      <nav className="basis-4/6 hidden justify-center space-x-5 lg:space-x-10 text-xl font-bold md:flex whitespace-nowrap">
         <Link href="/" className="text-gray-700 hover:text-blue-600 transition relative after:content-[''] after:absolute after:left-1/2 after:bottom-0 after:h-[2.2px] after:w-0 after:bg-[#24507A] after:transition-all after:duration-300 hover:after:left-0 hover:after:w-full after:origin-center">Trang chủ</Link>
         <Link href="/gioi-thieu" className="text-gray-700 hover:text-blue-600 transition relative after:content-[''] after:absolute after:left-1/2 after:bottom-0 after:h-[2.2px] after:w-0 after:bg-[#24507A] after:transition-all after:duration-300 hover:after:left-0 hover:after:w-full after:origin-center">Giới thiệu</Link>
          <Link href="/dich-vu" className="text-gray-700 hover:text-blue-600 transition relative after:content-[''] after:absolute after:left-1/2 after:bottom-0 after:h-[2.2px] after:w-0 after:bg-[#24507A] after:transition-all after:duration-300 hover:after:left-0 hover:after:w-full after:origin-center">Dự án</Link>
@@ -62,10 +62,21 @@ function Header() {
               </DrawerClose>
             </DrawerHeader>
             <nav className="flex flex-col space-y-4 px-4 py-2">
-              <Link href="#" className="text-gray-700 hover:text-blue-600 transition text-lg font-semibold">Trang chủ</Link>
-              <Link href="#" className="text-gray-700 hover:text-blue-600 transition text-lg font-semibold">Giới thiệu</Link>
-              <Link href="#" className="text-gray-700 hover:text-blue-600 transition text-lg font-semibold">Dịch vụ</Link>
-              <Link href="#" className="text-gray-700 hover:text-blue-600 transition text-lg font-semibold">Liên hệ</Link>
+             <DrawerClose asChild>
+                <Link href="/" className="text-gray-700 hover:text-blue-600 transition text-lg font-semibold">Trang chủ</Link>
+              </DrawerClose>
+              <DrawerClose asChild>
+                <Link href="/gioi-thieu" className="text-gray-700 hover:text-blue-600 transition text-lg font-semibold">Giới thiệu</Link>
+              </DrawerClose>
+              <DrawerClose asChild>
+                <Link href="/du-an" className="text-gray-700 hover:text-blue-600 transition text-lg font-semibold">Dự án</Link>
+              </DrawerClose>
+              <DrawerClose asChild>
+                <Link href="/dich-vu" className="text-gray-700 hover:text-blue-600 transition text-lg font-semibold">Dịch vụ</Link>
+              </DrawerClose>
+              <DrawerClose asChild>
+                <Link href="/lien-he" className="text-gray-700 hover:text-blue-600 transition text-lg font-semibold">Liên hệ</Link>
+              </DrawerClose>
             </nav>
             <DrawerFooter>
               <DrawerClose asChild>

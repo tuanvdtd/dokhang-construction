@@ -17,7 +17,7 @@ export default function ConstructionGrid() {
       <div className="max-w-6xl mx-auto text-center">
         <h2 className="text-2xl md:text-3xl font-semibold mb-10 relative inline-block">
           DỊCH VỤ CỦA CHÚNG TÔI
-          <span className="block w-16 h-[2px] bg-white mx-auto mt-2"></span>
+          <span className="block w-16 h-0.5 bg-white mx-auto mt-2"></span>
         </h2>
 
         <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 justify-items-center mt-5">

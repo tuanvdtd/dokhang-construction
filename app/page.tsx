@@ -51,10 +51,12 @@ export default function App() {
                   THIẾT KẾ <br />
                   <span className="text-gray-700">KIẾN TRÚC &amp; NỘI THẤT</span>
                 </h2>
-
-                <button className="bg-blue-600 hover:bg-blue-700 text-white text-xs font-semibold px-4 py-1.5 rounded-full transition-all duration-300 shadow-md">
-                  Báo giá &gt;&gt;&gt;
-                </button>
+                <a href="https://zalo.me/0123456789" target="_blank"
+                  rel="noopener noreferrer">
+                  <button className="bg-blue-600 hover:bg-blue-700 text-white text-xs font-semibold px-4 py-1.5 rounded-full transition-all duration-300 shadow-md">
+                    Báo giá &gt;&gt;&gt;
+                  </button>
+                </a>
               </div>
             </div>
           </Col>
@@ -94,9 +96,12 @@ export default function App() {
                   <span className="text-gray-700">PHẦN THÔ &amp; HOÀN THIỆN</span>
                 </h2>
 
-                <button className="bg-blue-600 hover:bg-blue-700 text-white text-xs font-semibold px-4 py-1.5 rounded-full transition-all duration-300 shadow-md">
-                  Báo giá &gt;&gt;&gt;
-                </button>
+                <a href="https://zalo.me/0123456789" target="_blank"
+                  rel="noopener noreferrer">
+                  <button className="bg-blue-600 hover:bg-blue-700 text-white text-xs font-semibold px-4 py-1.5 rounded-full transition-all duration-300 shadow-md">
+                    Báo giá &gt;&gt;&gt;
+                  </button>
+                </a>
               </div>
             </div>
           </Col>
@@ -135,9 +140,12 @@ export default function App() {
                   THI CÔNG NỘI THẤT
                 </h2>
 
-                <button className="bg-blue-600 hover:bg-blue-700 text-white text-xs font-semibold px-4 py-1.5 rounded-full transition-all duration-300 shadow-md">
-                  Báo giá &gt;&gt;&gt;
-                </button>
+                <a href="https://zalo.me/0123456789" target="_blank"
+                  rel="noopener noreferrer">
+                  <button className="bg-blue-600 hover:bg-blue-700 text-white text-xs font-semibold px-4 py-1.5 rounded-full transition-all duration-300 shadow-md">
+                    Báo giá &gt;&gt;&gt;
+                  </button>
+                </a>
               </div>
             </div>
           </Col>
