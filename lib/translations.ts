@@ -47,8 +47,8 @@ export const translations = {
     },
     // About Us
     about: {
-      title: 'About BuildCo',
-      intro: 'Since 1999, BuildCo has been a trusted name in construction, delivering exceptional results for residential, commercial, and industrial projects.',
+      title: 'About DoKhangCo',
+      intro: 'Since 2000, DoKhangCo has been a trusted name in construction, delivering exceptional results for residential, commercial, and industrial projects.',
       paragraph1: 'Our team of experienced professionals brings together expertise in architecture, engineering, and construction management to transform your vision into reality. We pride ourselves on building lasting relationships with our clients through transparency, integrity, and outstanding craftsmanship.',
       paragraph2: 'From concept to completion, we\'re committed to exceeding expectations and creating structures that stand the test of time. Our portfolio includes award-winning projects across multiple sectors, each demonstrating our dedication to innovation and quality.',
       licensed: 'Licensed & Insured',
@@ -213,8 +213,8 @@ export const translations = {
     },
     // About Us
     about: {
-      title: 'Về BuildCo',
-      intro: 'Từ năm 1999, BuildCo đã là một tên tuổi đáng tin cậy trong lĩnh vực xây dựng, mang lại kết quả xuất sắc cho các dự án dân dụng, thương mại và công nghiệp.',
+      title: 'Về Chúng Tôi',
+      intro: 'Từ năm 2020, Đỗ Khang đã là một tên tuổi đáng tin cậy trong lĩnh vực xây dựng, mang lại kết quả xuất sắc cho các dự án dân dụng, thương mại và công nghiệp.',
       paragraph1: 'Đội ngũ chuyên gia giàu kinh nghiệm của chúng tôi kết hợp chuyên môn về kiến trúc, kỹ thuật và quản lý xây dựng để biến tầm nhìn của bạn thành hiện thực. Chúng tôi tự hào xây dựng mối quan hệ lâu dài với khách hàng thông qua sự minh bạch, chính trực và tay nghề thủ công xuất sắc.',
       paragraph2: 'Từ ý tưởng đến hoàn thiện, chúng tôi cam kết vượt qua mong đợi và tạo ra các công trình kiến trúc bền vững theo thời gian. Danh mục của chúng tôi bao gồm các dự án đạt giải thưởng trong nhiều lĩnh vực, mỗi dự án đều thể hiện sự cống hiến của chúng tôi đối với đổi mới và chất lượng.',
       licensed: 'Được Cấp Phép & Bảo Hiểm',
@@ -315,9 +315,9 @@ export const translations = {
         hoursSaturday: 'Thứ Bảy: 9:00 SA - 4:00 CH',
       },
       emergency: {
-        title: 'Dịch Vụ Khẩn Cấp 24/7',
-        description: 'Cần hỗ trợ xây dựng khẩn cấp? Chúng tôi luôn sẵn sàng giúp đỡ suốt ngày đêm.',
-        button: 'Gọi Đường Dây Khẩn Cấp',
+        title: 'Liên Hệ Nhanh 24/7',
+        description: 'Cần hỗ trợ hoặc tư vấn trực tiếp? Hãy gửi thông tin qua biểu mẫu hoặc đến địa chỉ của chúng tôi trên bản đồ.',
+        button: 'Gửi Liên Hệ Ngay',
       },
     },
     // Footer
@@ -325,7 +325,7 @@ export const translations = {
       description: 'Dịch vụ xây dựng chuyên nghiệp với hơn 25 năm kinh nghiệm. Chúng tôi xây dựng các công trình chất lượng vượt qua thử thách thời gian.',
       quickLinks: 'Liên Kết Nhanh',
       services: 'Dịch Vụ',
-      copyright: '© 2025 Xây Dựng BuildCo. Đã đăng ký bản quyền.',
+      copyright: '© 2025 Xây Dựng Đỗ Khang. Đã đăng ký bản quyền.',
       privacy: 'Chính Sách Bảo Mật',
       terms: 'Điều Khoản Dịch Vụ',
       sitemap: 'Sơ Đồ Trang',

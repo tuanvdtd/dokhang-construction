@@ -4,6 +4,7 @@ import { Button } from '../components/ui/button';
 import { ArrowRight } from 'lucide-react';
 import { useLanguage } from '../lib/LanguageContext';
 import { useEffect, useState } from 'react';
+import Link from 'next/link';
 
 export function HeroSection() {
   const { t } = useLanguage();
@@ -45,20 +46,26 @@ export function HeroSection() {
           {t.hero.subtitle}
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Button 
-            size="lg" 
-            className="bg-orange-600 hover:bg-orange-700 text-white px-8 py-6 transition-all duration-300 hover:scale-110 hover:shadow-2xl group"
-          >
-            <span className="group-hover:mr-1 transition-all duration-300">{t.hero.freeQuote}</span>
-            <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" />
-          </Button>
-          <Button 
-            size="lg" 
-            variant="outline" 
-            className="bg-white/10 backdrop-blur-sm border-white text-white hover:bg-white/20 px-8 py-6 transition-all duration-300 hover:scale-110 hover:shadow-2xl hover:bg-white hover:text-orange-600"
-          >
-            {t.hero.viewProjects}
-          </Button>
+          <Link href="https://zalo.me/0987654321"
+              target="_blank"
+              rel="noopener noreferrer">
+            <Button 
+              size="lg" 
+              className="bg-orange-600 cursor-pointer hover:bg-orange-700 text-white px-8 py-6 transition-all duration-300 hover:scale-110 hover:shadow-2xl group"
+            >
+              <span className="group-hover:mr-1 transition-all duration-300">{t.hero.freeQuote}</span>
+              <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" />
+            </Button>
+          </Link>
+          <Link href='/du-an'>
+            <Button 
+              size="lg" 
+              variant="outline" 
+              className="bg-white/10 cursor-pointer backdrop-blur-sm border-white text-white hover:bg-white/20 px-8 py-6 transition-all duration-300 hover:scale-110 hover:shadow-2xl hover:bg-white hover:text-orange-600"
+            >
+              {t.hero.viewProjects}
+            </Button>
+          </Link>
         </div>
       </div>
     </div>

@@ -4,6 +4,7 @@ import { useLanguage } from '../lib/LanguageContext';
 import { Button } from './ui/button';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from './ui/carousel';
 import { useEffect, useRef } from 'react';
+import Link from 'next/link';
 
 export function ConstructionGrid() {
   const { t } = useLanguage();
@@ -36,7 +37,7 @@ export function ConstructionGrid() {
       if (carouselRef.current?.scrollNext) {
         carouselRef.current.scrollNext();
       }
-    }, 5000); // Change slide every 5 seconds
+    }, 3000); // Change slide every 3 seconds
 
     return () => clearInterval(interval);
   }, []);
@@ -58,7 +59,7 @@ export function ConstructionGrid() {
         {/* Desktop: Grid View */}
         <div className="hidden lg:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
-            <div
+            <Link href="/du-an/slug"
               key={index}
               className="group relative overflow-hidden rounded-lg shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2"
             >
@@ -76,7 +77,7 @@ export function ConstructionGrid() {
                 <h3 className="text-2xl text-white mb-2 transform group-hover:translate-x-2 transition-transform duration-300">{project.title}</h3>
                 <p className="text-gray-200 transform group-hover:translate-x-2 transition-transform duration-300">{project.description}</p>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
 
@@ -129,13 +130,15 @@ export function ConstructionGrid() {
 
         {/* View More Button */}
         <div className="text-center mt-12">
-          <Button 
-            size="lg" 
-            className="bg-orange-600 hover:bg-orange-700 transition-all duration-300 hover:scale-110 hover:shadow-lg group"
-          >
-            <span className="group-hover:mr-2 transition-all duration-300">{t.projects.viewMore}</span>
-            <span className="inline-block transform group-hover:translate-x-1 transition-transform duration-300">→</span>
-          </Button>
+          <Link href="/du-an">
+            <Button 
+              size="lg" 
+              className="bg-orange-600 hover:bg-orange-700 transition-all duration-300 hover:scale-110 hover:shadow-lg group"
+            >
+              <span className="group-hover:mr-2 transition-all duration-300">{t.projects.viewMore}</span>
+              <span className="inline-block transform group-hover:translate-x-1 transition-transform duration-300">→</span>
+            </Button>
+          </Link>
         </div>
       </div>
     </section>

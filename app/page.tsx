@@ -4,7 +4,7 @@ import { Services } from '@/components/Services';
 import { AboutUs } from '@/components/AboutUs';
 // import { Projects } from '@/components/Projects';
 import { Testimonials } from '@/components/Testimonials';
-// import { Contact } from '@/components/Contact';
+import { Contact } from '@/components/Contact';
 import { SectionDivider } from '@/components/SectionDivider';
 
 export default function App() {
@@ -27,9 +27,9 @@ export default function App() {
           <SectionDivider />
           <Testimonials />
           <SectionDivider />
-          {/* <div id="contact">
+          <div id="contact">
             <Contact />
-          </div> */}
+          </div>
     </>
   );
 }
