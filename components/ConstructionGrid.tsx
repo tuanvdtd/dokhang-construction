@@ -1,73 +1,143 @@
-import Image from "next/image";
-import Link from "next/link";
-import { Building2, Home, House, Ruler } from "lucide-react";
-import projects from "@/data/projects.json";
+'use client';
+import { ImageWithFallback } from './image/ImageWithFallback';
+import { useLanguage } from '../lib/LanguageContext';
+import { Button } from './ui/button';
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from './ui/carousel';
+import { useEffect, useRef } from 'react';
 
-const services = [
-  { icon: Building2, title: "THI CÔNG TRỌN GÓI" },
-  { icon: Home, title: "THIẾT KẾ BIỆT THỰ" },
-  { icon: House, title: "THIẾT KẾ NHÀ PHỐ" },
-  { icon: Ruler, title: "THIẾT KẾ NỘI THẤT" },
-];
+export function ConstructionGrid() {
+  const { t } = useLanguage();
+  const carouselRef = useRef<any>(null);
 
-export default function ConstructionGrid() {
+  const projects = [
+    {
+      image: 'https://images.unsplash.com/photo-1625201212921-1c5e5557d451?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBhcmNoaXRlY3R1cmUlMjBidWlsZGluZ3xlbnwxfHx8fDE3NjE2MTU0MjB8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
+      title: t.projects.office.title,
+      category: t.projects.office.category,
+      description: t.projects.office.description,
+    },
+    {
+      image: 'https://images.unsplash.com/photo-1580063665421-4c9cbe9ec11b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxyZXNpZGVudGlhbCUyMGhvdXNlJTIwY29uc3RydWN0aW9ufGVufDF8fHx8MTc2MTYzNDcyN3ww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
+      title: t.projects.residential.title,
+      category: t.projects.residential.category,
+      description: t.projects.residential.description,
+    },
+    {
+      image: 'https://images.unsplash.com/photo-1718209962486-4f91ce71886b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjb25zdHJ1Y3Rpb24lMjB3b3JrZXJzJTIwdGVhbXxlbnwxfHx8fDE3NjE1OTgzODB8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
+      title: t.projects.warehouse.title,
+      category: t.projects.warehouse.category,
+      description: t.projects.warehouse.description,
+    },
+  ];
+
+  // Autoplay functionality
+  useEffect(() => {
+    const interval = setInterval(() => {
+      if (carouselRef.current?.scrollNext) {
+        carouselRef.current.scrollNext();
+      }
+    }, 5000); // Change slide every 5 seconds
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
-    <>
-    <section className="bg-[#24507a] text-white py-15 px-6">
-      <div className="max-w-6xl mx-auto text-center">
-        <h2 className="text-2xl md:text-3xl font-semibold mb-10 relative inline-block">
-          DỊCH VỤ CỦA CHÚNG TÔI
-          <span className="block w-16 h-0.5 bg-white mx-auto mt-2"></span>
-        </h2>
+    <section className="py-20 bg-white relative overflow-hidden">
+      {/* Parallax Background Elements */}
+      <div className="absolute top-20 right-0 w-96 h-96 bg-orange-50 rounded-full blur-3xl opacity-30 animate-pulse"></div>
+      <div className="absolute bottom-20 left-0 w-96 h-96 bg-orange-50 rounded-full blur-3xl opacity-30 animate-pulse" style={{ animationDelay: '2s' }}></div>
 
-        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 justify-items-center mt-5">
-          {services.map((service, index) => {
-            const Icon = service.icon;
-            return (
-              <div
-                key={index}
-                className="flex flex-col items-center text-center transition-transform duration-300 hover:scale-105"
-              >
-                <div className="relative w-24 h-24 flex items-center justify-center rounded-full border-2 border-white mb-4">
-                  <Icon className="w-10 h-10 text-white" strokeWidth={1.5} />
-                  <div className="absolute w-24 h-24 rounded-full border-2 border-dashed border-white opacity-60"></div>
-                </div>
-                <p className="text-sm md:text-base font-medium">{service.title}</p>
-              </div>
-            );
-          })}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="text-center mb-16 transition-all duration-500">
+          <h2 className="text-4xl md:text-5xl mb-4 animate-fade-in">{t.projects.title}</h2>
+          <p className="text-xl text-gray-600 max-w-2xl mx-auto animate-fade-in">
+            {t.projects.subtitle}
+          </p>
         </div>
-      </div>
-    </section>
-    <section className="py-5 bg-white">
-      <div className="max-w-6xl mx-auto px-6 text-center">
-        <h1 className="text-3xl text-[#1e73be] cursor-pointer hover:text-black font-bold pt-8 uppercase inline-block :after:content-[''] after:block after:w-[50%] hover:after:w-full after:transition-all after:duration-300 after:h-0.5 after:bg-[#3498db] hover:after:bg-black after:mx-auto after:mt-4 ">
-        THI CÔNG CHỌN GÓI
-      </h1>
 
-        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-5 mt-8">
-          {projects.map((item, index) => (
-            <Link
+        {/* Desktop: Grid View */}
+        <div className="hidden lg:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {projects.map((project, index) => (
+            <div
               key={index}
-              href={`/san-pham/${item.slug}`}
-              className="group"
+              className="group relative overflow-hidden rounded-lg shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2"
             >
-              <div className="overflow-hidden rounded-2xl shadow-md w-full relative" style={{ aspectRatio: '4/3' }}>
-                <Image
-                  src={item.image}
-                  alt={item.title}
-                  fill
-                  className="object-cover w-full h-64 group-hover:scale-105 transition-transform duration-500"
+              <div className="aspect-[4/3] overflow-hidden">
+                <ImageWithFallback
+                  src={project.image}
+                  alt={project.title}
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                 />
               </div>
-              <p className="text-center mt-3 text-gray-800 font-medium group-hover:text-blue-600 transition-colors">
-                {item.title}
-              </p>
-            </Link>
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent flex flex-col justify-end p-6 transition-all duration-500">
+                <span className="inline-block px-3 py-1 bg-orange-600 text-white rounded-full text-sm mb-2 w-fit transform group-hover:scale-110 transition-transform duration-300">
+                  {project.category}
+                </span>
+                <h3 className="text-2xl text-white mb-2 transform group-hover:translate-x-2 transition-transform duration-300">{project.title}</h3>
+                <p className="text-gray-200 transform group-hover:translate-x-2 transition-transform duration-300">{project.description}</p>
+              </div>
+            </div>
           ))}
+        </div>
+
+        {/* Mobile/Tablet: Carousel View */}
+        <div className="lg:hidden">
+          <Carousel
+            ref={carouselRef}
+            opts={{
+              align: "start",
+              loop: true,
+            }}
+            className="w-full"
+          >
+            <CarouselContent>
+              {projects.map((project, index) => (
+                <CarouselItem key={index} className="md:basis-1/2">
+                  <div className="group relative overflow-hidden rounded-lg shadow-lg">
+                    <div className="aspect-[4/3] overflow-hidden">
+                      <ImageWithFallback
+                        src={project.image}
+                        alt={project.title}
+                        className="w-full h-full object-cover transition-transform duration-700"
+                      />
+                    </div>
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent flex flex-col justify-end p-6">
+                      <span className="inline-block px-3 py-1 bg-orange-600 text-white rounded-full text-sm mb-2 w-fit">
+                        {project.category}
+                      </span>
+                      <h3 className="text-2xl text-white mb-2">{project.title}</h3>
+                      <p className="text-gray-200">{project.description}</p>
+                    </div>
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious className="left-2 bg-white/90 hover:bg-white transition-all duration-300" />
+            <CarouselNext className="right-2 bg-white/90 hover:bg-white transition-all duration-300" />
+          </Carousel>
+          
+          {/* Carousel Dots Indicator */}
+          <div className="flex justify-center gap-2 mt-6">
+            {projects.map((_, index) => (
+              <div
+                key={index}
+                className="w-2 h-2 rounded-full bg-gray-300 transition-all duration-300 hover:bg-orange-600"
+              ></div>
+            ))}
+          </div>
+        </div>
+
+        {/* View More Button */}
+        <div className="text-center mt-12">
+          <Button 
+            size="lg" 
+            className="bg-orange-600 hover:bg-orange-700 transition-all duration-300 hover:scale-110 hover:shadow-lg group"
+          >
+            <span className="group-hover:mr-2 transition-all duration-300">{t.projects.viewMore}</span>
+            <span className="inline-block transform group-hover:translate-x-1 transition-transform duration-300">→</span>
+          </Button>
         </div>
       </div>
     </section>
-    </>
   );
 }

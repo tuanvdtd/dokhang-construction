@@ -19,6 +19,7 @@
     "antd": "^5.27.6",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
+    "embla-carousel-react": "^8.6.0",
     "lucide-react": "^0.546.0",
     "next": "16.0.0",
     "postgres": "^3.4.7",

@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import Header from "@/components/header";
-import Footer from "@/components/footer";
+import { Header } from "@/components/header";
+import { Footer } from "@/components/footer";
 import { Toaster } from 'sonner'
+import { LanguageProvider } from '@/lib/LanguageContext';
 
 
 const geistSans = Geist({
@@ -29,14 +30,18 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased w-full m-0 p-0 `}
+        
       >
         <Toaster position="top-center" richColors />
-        <div className="w-full">
-          <Header />
-            {children}
-          <Footer />
-        </div>
+         <LanguageProvider>
+          <div className="w-full min-h-screen">
+            <Header />
+             <main id="home">
+                {children}
+              </main>
+            <Footer />
+          </div>
+        </LanguageProvider>
       </body>
     </html>
   );
