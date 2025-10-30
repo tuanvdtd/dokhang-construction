@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect} from "react";
 import Image from "next/image";
 import ReCAPTCHA from "react-google-recaptcha";
 import { toast } from 'sonner';
@@ -52,10 +52,22 @@ export default function ContactSection() {
       setIsSubmitting(false); // Kết thúc gửi
     }
   };
+  useEffect(() => {
+      const prev = window.history.scrollRestoration;
+      if ('scrollRestoration' in window.history) {
+        window.history.scrollRestoration = 'manual';
+      }
+      window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
+      return () => {
+        if ('scrollRestoration' in window.history) {
+          window.history.scrollRestoration = prev ?? 'auto';
+        }
+      };
+    }, []);
 
 
   return (
-    <section className="w-full">
+    <section className="w-full mt-16 md:mt-20">
       {/* Ảnh đầu trang */}
       <div className="relative w-full h-64 md:h-96 lg:h-128">
         <Image

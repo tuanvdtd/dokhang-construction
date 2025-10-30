@@ -30,7 +30,7 @@ export function Header() {
             <Link href="/#services" className="text-gray-700 hover:text-orange-600 transition-all duration-300 hover:scale-110 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-orange-600 hover:after:w-full after:transition-all after:duration-300">
               {t.header.services}
             </Link>
-            <Link href="/#projects" className="text-gray-700 hover:text-orange-600 transition-all duration-300 hover:scale-110 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-orange-600 hover:after:w-full after:transition-all after:duration-300">
+            <Link href="/du-an" className="text-gray-700 hover:text-orange-600 transition-all duration-300 hover:scale-110 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-orange-600 hover:after:w-full after:transition-all after:duration-300">
               {t.header.projects}
             </Link>
             <Link href="/#about" className="text-gray-700 hover:text-orange-600 transition-all duration-300 hover:scale-110 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-orange-600 hover:after:w-full after:transition-all after:duration-300">

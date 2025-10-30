@@ -63,7 +63,7 @@ export function ConstructionGrid() {
               key={index}
               className="group relative overflow-hidden rounded-lg shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2"
             >
-              <div className="aspect-[4/3] overflow-hidden">
+              <div className="aspect-4/3 overflow-hidden">
                 <ImageWithFallback
                   src={project.image}
                   alt={project.title}

@@ -1,5 +1,130 @@
 export const translations = {
   en: {
+    // Projects Page
+    projectsPage: {
+      header: {
+        badge: 'Portfolio Showcase',
+        title: 'Our Projects',
+        subtitle: 'Explore our completed and ongoing construction works. From commercial complexes to residential masterpieces, see how we bring visions to life.',
+      },
+      stats: {
+        totalProjects: 'Projects Completed',
+        onTimeDelivery: 'On-Time Delivery',
+        sqmBuilt: 'Sq.m Built',
+        clientSatisfaction: 'Client Satisfaction',
+      },
+      tabs: {
+        completed: 'Completed Projects',
+        ongoing: 'Ongoing Projects',
+      },
+      badges: {
+        completed: 'Completed',
+        inProgress: 'In Progress',
+      },
+      labels: {
+        expectedCompletion: 'Expected Completion',
+        progress: 'Progress',
+        currentPhase: 'Current Phase',
+      },
+      phases: {
+        foundation: 'Foundation Work',
+        structure: 'Structural Phase',
+        finishing: 'Finishing Touches',
+      },
+      buttons: {
+        viewDetails: 'View Details',
+        viewProgress: 'View Progress',
+      },
+      metrics: {
+        satisfaction: 'Satisfaction',
+        budget: 'Budget',
+        onTime: 'On Time',
+      },
+      projects: {
+        completed: {
+          project1: {
+            name: 'Downtown Office Complex',
+            location: 'New York, NY',
+            type: 'Commercial',
+            description: 'State-of-the-art 5-story office building with sustainable design features and modern amenities.',
+          },
+          project2: {
+            name: 'Luxury Residential Villa',
+            location: 'Los Angeles, CA',
+            type: 'Residential',
+            description: 'Custom-built luxury home featuring contemporary design, smart home technology, and premium finishes.',
+          },
+          project3: {
+            name: 'Industrial Distribution Center',
+            location: 'Chicago, IL',
+            type: 'Industrial',
+            description: 'Large-scale warehouse facility with advanced logistics infrastructure and automated systems.',
+          },
+          project4: {
+            name: 'Boutique Restaurant & Bar',
+            location: 'Miami, FL',
+            type: 'Commercial',
+            description: 'Modern restaurant space with open kitchen concept and sophisticated interior design.',
+          },
+          project5: {
+            name: 'Modern Family Home',
+            location: 'Austin, TX',
+            type: 'Residential',
+            description: 'Energy-efficient family home with contemporary architecture and eco-friendly materials.',
+          },
+          project6: {
+            name: 'Corporate Headquarters',
+            location: 'San Francisco, CA',
+            type: 'Commercial',
+            description: 'Multi-story corporate office with collaborative workspaces and sustainable building practices.',
+          },
+        },
+        ongoing: {
+          project1: {
+            name: 'Metro Shopping Mall',
+            location: 'Boston, MA',
+            type: 'Commercial',
+            description: 'Multi-level retail complex with entertainment facilities, restaurants, and parking structure.',
+          },
+          project2: {
+            name: 'Luxury Hotel & Resort',
+            location: 'Orlando, FL',
+            type: 'Hospitality',
+            description: '200-room luxury hotel with conference facilities, spa, and fine dining restaurants.',
+          },
+          project3: {
+            name: 'Community School Building',
+            location: 'Seattle, WA',
+            type: 'Educational',
+            description: 'Modern educational facility with smart classrooms, laboratories, and sports facilities.',
+          },
+        },
+      },
+      testimonialsSection: {
+        title: 'Client Success Stories',
+        subtitle: 'Hear what our clients have to say about their project experience',
+      },
+      testimonials: {
+        testimonial1: {
+          role: 'CEO, Tech Corporation',
+          content: 'BuildCo delivered our new headquarters beyond expectations. Professional, on-time, and exceptional quality throughout.',
+        },
+        testimonial2: {
+          role: 'Homeowner',
+          content: 'Our dream home became a reality thanks to BuildCo\'s expertise. The attention to detail was remarkable.',
+        },
+        testimonial3: {
+          role: 'Facility Manager',
+          content: 'The warehouse project was completed ahead of schedule with no compromise on quality. Highly recommended!',
+        },
+      },
+      cta: {
+        title: 'Ready to Start Your Next Project?',
+        subtitle: 'Let\'s discuss how we can bring your construction vision to life with our proven expertise and commitment to excellence.',
+        primaryButton: 'Contact Us Today',
+        secondaryButton: 'Schedule Consultation',
+      },
+    },
     // Header
     header: {
       home: 'Home',
@@ -329,6 +454,131 @@ export const translations = {
       privacy: 'Chính Sách Bảo Mật',
       terms: 'Điều Khoản Dịch Vụ',
       sitemap: 'Sơ Đồ Trang',
+    },
+    // Projects Page
+    projectsPage: {
+      header: {
+        badge: 'Triển Lãm Dự Án',
+        title: 'Dự Án Của Chúng Tôi',
+        subtitle: 'Khám phá các công trình đã hoàn thành và đang triển khai. Từ tổ hợp thương mại đến kiệt tác dân dụng, xem cách chúng tôi biến tầm nhìn thành hiện thực.',
+      },
+      stats: {
+        totalProjects: 'Dự Án Hoàn Thành',
+        onTimeDelivery: 'Giao Đúng Hạn',
+        sqmBuilt: 'M² Xây Dựng',
+        clientSatisfaction: 'Khách Hàng Hài Lòng',
+      },
+      tabs: {
+        completed: 'Dự Án Hoàn Thành',
+        ongoing: 'Dự Án Đang Triển Khai',
+      },
+      badges: {
+        completed: 'Hoàn Thành',
+        inProgress: 'Đang Thi Công',
+      },
+      labels: {
+        expectedCompletion: 'Dự Kiến Hoàn Thành',
+        progress: 'Tiến Độ',
+        currentPhase: 'Giai Đoạn Hiện Tại',
+      },
+      phases: {
+        foundation: 'Công Tác Móng',
+        structure: 'Giai Đoạn Kết Cấu',
+        finishing: 'Hoàn Thiện',
+      },
+      buttons: {
+        viewDetails: 'Xem Chi Tiết',
+        viewProgress: 'Xem Tiến Độ',
+      },
+      metrics: {
+        satisfaction: 'Hài Lòng',
+        budget: 'Ngân Sách',
+        onTime: 'Đúng Hạn',
+      },
+      projects: {
+        completed: {
+          project1: {
+            name: 'Tổ Hợp Văn Phòng Trung Tâm',
+            location: 'New York, NY',
+            type: 'Thương Mại',
+            description: 'Tòa nhà văn phòng 5 tầng hiện đại với các tính năng thiết kế bền vững và tiện nghi cao cấp.',
+          },
+          project2: {
+            name: 'Biệt Thự Cao Cấp',
+            location: 'Los Angeles, CA',
+            type: 'Dân Dụng',
+            description: 'Ngôi nhà sang trọng được xây dựng tùy chỉnh với thiết kế đương đại, công nghệ nhà thông minh và hoàn thiện cao cấp.',
+          },
+          project3: {
+            name: 'Trung Tâm Phân Phối Công Nghiệp',
+            location: 'Chicago, IL',
+            type: 'Công Nghiệp',
+            description: 'Kho quy mô lớn với cơ sở hạ tầng logistics tiên tiến và hệ thống tự động hóa.',
+          },
+          project4: {
+            name: 'Nhà Hàng & Bar Boutique',
+            location: 'Miami, FL',
+            type: 'Thương Mại',
+            description: 'Không gian nhà hàng hiện đại với bếp mở và thiết kế nội thất tinh tế.',
+          },
+          project5: {
+            name: 'Nhà Ở Gia Đình Hiện Đại',
+            location: 'Austin, TX',
+            type: 'Dân Dụng',
+            description: 'Ngôi nhà tiết kiệm năng lượng với kiến trúc đương đại và vật liệu thân thiện môi trường.',
+          },
+          project6: {
+            name: 'Trụ Sở Công Ty',
+            location: 'San Francisco, CA',
+            type: 'Thương Mại',
+            description: 'Văn phòng nhiều tầng với không gian làm việc hợp tác và thực hành xây dựng bền vững.',
+          },
+        },
+        ongoing: {
+          project1: {
+            name: 'Trung Tâm Thương Mại Metro',
+            location: 'Boston, MA',
+            type: 'Thương Mại',
+            description: 'Tổ hợp bán lẻ nhiều tầng với cơ sở giải trí, nhà hàng và bãi đậu xe.',
+          },
+          project2: {
+            name: 'Khách Sạn & Khu Nghỉ Dưỡng Cao Cấp',
+            location: 'Orlando, FL',
+            type: 'Khách Sạn',
+            description: 'Khách sạn sang trọng 200 phòng với cơ sở hội nghị, spa và nhà hàng cao cấp.',
+          },
+          project3: {
+            name: 'Tòa Nhà Trường Học Cộng Đồng',
+            location: 'Seattle, WA',
+            type: 'Giáo Dục',
+            description: 'Cơ sở giáo dục hiện đại với lớp học thông minh, phòng thí nghiệm và cơ sở thể thao.',
+          },
+        },
+      },
+      testimonialsSection: {
+        title: 'Câu Chuyện Thành Công Từ Khách Hàng',
+        subtitle: 'Nghe khách hàng của chúng tôi nói về trải nghiệm dự án của họ',
+      },
+      testimonials: {
+        testimonial1: {
+          role: 'Giám Đốc Điều Hành, Công Ty Công Nghệ',
+          content: 'BuildCo đã giao trụ sở mới vượt quá mong đợi. Chuyên nghiệp, đúng hạn và chất lượng xuất sắc.',
+        },
+        testimonial2: {
+          role: 'Chủ Nhà',
+          content: 'Ngôi nhà mơ ước của chúng tôi đã thành hiện thực nhờ chuyên môn của BuildCo. Sự chú ý đến chi tiết thật đáng kinh ngạc.',
+        },
+        testimonial3: {
+          role: 'Quản Lý Cơ Sở',
+          content: 'Dự án kho hàng hoàn thành trước thời hạn mà không ảnh hưởng đến chất lượng. Rất khuyến khích!',
+        },
+      },
+      cta: {
+        title: 'Sẵn Sàng Bắt Đầu Dự Án Tiếp Theo?',
+        subtitle: 'Hãy thảo luận về cách chúng tôi có thể biến tầm nhìn xây dựng của bạn thành hiện thực với chuyên môn đã được chứng minh.',
+        primaryButton: 'Liên Hệ Ngay',
+        secondaryButton: 'Đặt Lịch Tư Vấn',
+      },
     },
   },
 };
